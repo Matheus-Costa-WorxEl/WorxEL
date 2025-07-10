@@ -44,7 +44,7 @@
             line-height: 1.6;
             overflow-x: hidden;
             position: relative;
-            
+
         }
 
         h1,
@@ -62,7 +62,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 5px;
-            
+
         }
 
         /* Header */
@@ -1094,8 +1094,8 @@
 
         @media (max-width: 768px) {
 
-            .navbar{
-                justify-content:space-between;
+            .navbar {
+                justify-content: space-between;
 
             }
 
@@ -1114,7 +1114,7 @@
 
             .hero {
                 padding: 150px 0 80px;
-                
+
             }
 
             .footer-content {
@@ -1145,7 +1145,7 @@
                 position: fixed;
                 top: 0;
                 z-index: 1000;
-                
+
             }
 
             .navbar {
@@ -1250,7 +1250,7 @@
 
             .hero {
                 padding: 140px 0 70px;
-               
+
             }
 
             .features,
@@ -1401,6 +1401,99 @@
                 font-size: 0.75rem;
             }
         } */
+
+        /* CORREÇÃO DO ESPAÇO EM BRANCO NO LADO DIREITO */
+        @media (max-width: 768px) {
+
+            /* Correção para o container principal */
+            .container {
+                padding: 0 15px;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            /* Garantir que o header ocupe toda a largura */
+            header {
+                width: 100%;
+                left: 0;
+                right: 0;
+            }
+
+            /* Remover qualquer overflow horizontal */
+            body,
+            html {
+                overflow-x: hidden;
+                width: 100%;
+            }
+
+            /* Ajustar elementos que podem estar causando overflow */
+            .hero-content,
+            .client-content,
+            .cta-grid {
+                width: 100%;
+            }
+
+            /* Ajustar imagens para não ultrapassar a largura */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* Correção para o elemento flutuante no hero */
+            .hero:before {
+                width: 400px;
+                height: 400px;
+                top: -150px;
+                right: -150px;
+            }
+
+            /* Correção para o marcador "MAIS POPULAR" */
+            .plan-card.popular::before {
+                right: -35px;
+                padding: 3px 25px;
+                font-size: 10px;
+            }
+
+            /* Garantir que o mapa não cause overflow */
+            .map-container {
+                border-radius: 0;
+                margin: 30px -15px 0;
+                width: calc(100% + 30px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero:before {
+                width: 300px;
+                height: 300px;
+                top: -100px;
+                right: -100px;
+            }
+
+            /* Correção adicional para o marcador "MAIS POPULAR" */
+            .plan-card.popular::before {
+                right: -38px;
+                padding: 2px 20px;
+                font-size: 9px;
+            }
+
+            /* Ajuste fino para elementos de texto */
+            .hero-text h1,
+            .section-title h2 {
+                word-break: break-word;
+            }
+        }
+
+        /* Garantir que nenhum elemento cause overflow horizontal */
+        * {
+            max-width: 100%;
+        }
+
+        /* Prevenir overflow horizontal em toda a página */
+        body {
+            overflow-x: hidden;
+            position: relative;
+        }
     </style>
 </head>
 <body>
