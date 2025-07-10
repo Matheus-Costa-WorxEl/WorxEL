@@ -44,7 +44,7 @@
             line-height: 1.6;
             overflow-x: hidden;
             position: relative;
-            background-size: auto;
+            
         }
 
         h1,
@@ -60,9 +60,9 @@
         .container {
             width: 100%;
             max-width: 1200px;
-            min-width: 500px;    /*atualização para dispostivos móveis */
             margin: 0 auto;
             padding: 0 20px;
+            min-width: auto;
         }
 
         /* Header */
@@ -71,7 +71,6 @@
             box-shadow: var(--shadow);
             position: fixed;
             width: 100%;
-            
             z-index: 1000;
             transition: var(--transition);
         }
@@ -160,6 +159,7 @@
             background: linear-gradient(135deg, var(--white) 0%, var(--light-gray) 100%);
             position: relative;
             overflow: hidden;
+            background-size: auto;
         }
 
         .hero:before {
@@ -1107,6 +1107,7 @@
 
             .hero {
                 padding: 150px 0 80px;
+                background-size: auto;  /* Testes para celulares*/
             }
 
             .footer-content {
@@ -1136,7 +1137,9 @@
             header {
                 position: fixed;
                 top: 0;
-                width: 100%;
+                /* width: 100%; */
+                width:auto;
+                background-size: auto;  /* Testes para celulares*/
                 z-index: 1000;
             }
 
@@ -1242,6 +1245,8 @@
 
             .hero {
                 padding: 140px 0 70px;
+                width:auto; /* Testes para celulares*/
+                background-size: auto;  /* Testes para celulares*/
             }
 
             .features,
