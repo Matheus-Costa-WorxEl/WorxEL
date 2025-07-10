@@ -1122,6 +1122,203 @@
                 padding: 25px;
             }
         }
+
+
+
+         /* CORREÇÕES DE RESPONSIVIDADE */
+        @media (max-width: 768px) {
+            /* Ajustes gerais de espaçamento */
+            .hero, .features, .plans, .client-focus, .news, .testimonials, .cta-section {
+                padding: 70px 0 !important;
+            }
+            
+            .hero {
+                padding-top: 130px !important;
+            }
+            
+            /* Header fixo em dispositivos móveis */
+            header {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 1000;
+            }
+            
+            .navbar {
+                padding: 15px 0;
+            }
+            
+            .logo h1 {
+                font-size: 24px;
+            }
+            
+            /* Melhorias na seção hero */
+            .hero-content {
+                flex-direction: column-reverse;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+                text-align: center;
+                margin-top: 30px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+                line-height: 1.3;
+            }
+            
+            .hero-text p {
+                font-size: 1.1rem;
+                max-width: 100%;
+            }
+            
+            /* Melhorias na seção de planos */
+            .plan-card.popular::before {
+                top: 10px;
+                right: -35px;
+                padding: 3px 25px;
+                font-size: 10px;
+            }
+            
+            /* Melhorias na seção de foco do cliente */
+            .client-content {
+                flex-direction: column;
+            }
+            
+            .client-text h2 {
+                font-size: 2rem;
+                text-align: center;
+            }
+            
+            .client-text h2:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .principles {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Melhorias na seção de notícias */
+            .news-container {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Melhorias no formulário */
+            .cta-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-form {
+                padding: 20px;
+                margin-top: 20px;
+            }
+            
+            .map-container {
+                height: 300px;
+                margin-top: 30px;
+            }
+            
+            /* Melhorias no rodapé */
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .footer-column {
+                margin-bottom: 25px;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            /* Ajustes para telas muito pequenas */
+            .hero-text h1 {
+                font-size: 1.7rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .features-grid, .plans-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-card, .plan-card, .news-card {
+                padding: 20px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .stat-value {
+                font-size: 2.5rem;
+            }
+            
+            .plan-card.popular::before {
+                top: 8px;
+                right: -38px;
+                padding: 2px 20px;
+                font-size: 9px;
+            }
+            
+            .cta-form {
+                padding: 15px;
+            }
+            
+            .cta-form .form-group {
+                margin-bottom: 15px;
+            }
+            
+            .cta-form input, 
+            .cta-form textarea {
+                padding: 10px 15px;
+                font-size: 0.95rem;
+            }
+            
+            .map-container {
+                height: 250px;
+            }
+            
+            .copyright p {
+                font-size: 0.8rem;
+                line-height: 1.5;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            /* Ajustes finos para dispositivos muito pequenos */
+            .hero-text h1 {
+                font-size: 1.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+            
+            .plan-header h3 {
+                font-size: 1.5rem;
+            }
+            
+            .plan-price {
+                font-size: 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttonsubmit {
+                padding: 10px 20px;
+                font-size: 0.95rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1482,7 +1679,7 @@
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        
                     </div>
                 </div>
                 
@@ -1504,10 +1701,10 @@
                 
                 <div class="footer-column">
                     <h3>Contato</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo</p>
-                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
-                    <p><i class="fas fa-envelope"></i> contato@worxel.com.br</p>
-                    <p><i class="fas fa-clock"></i> Seg-Sex: 9h às 18h</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Av.Justiano da Silva, Camboriú-SC</p>
+                    <p href="https://wa.me/5547992627553"><i class="fas fa-phone"></i> (47) 99262-7553</p>
+                    <p><i class="fas fa-envelope"></i> worxel@outlook.com</p>
+                    <p><i class="fas fa-clock"></i> Seg-Sex: 18h às 22h</p>
                 </div>
             </div>
             
