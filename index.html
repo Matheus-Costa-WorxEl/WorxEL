@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -532,13 +533,13 @@
             flex: 1;
         }
 
-        .client-text h2 {
+        /* .client-text h2 {
             font-size: 2.5rem;
             margin-bottom: 25px;
             color: var(--secondary);
             position: relative;
             display: inline-block;
-        }
+        } */
 
         .client-text h2:after {
             content: '';
@@ -553,6 +554,117 @@
 
         .client-text h2 span {
             color: var(--primary);
+        }
+
+        .client-text h2 {
+            text-align: center;
+            /* margin-bottom: 10px; */
+            color: black;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            display: inline-block;
+
+        }
+
+
+        .client-text h2 {
+            /* font-family: 'Courier New', Courier, monospace; */
+            
+            overflow: hidden;
+            /* Esconde o texto que "transborda" */
+            border-right: 0.10em solid #0066cc;
+            /* Cria o cursor piscante */
+            white-space: nowrap;
+            /* Impede a quebra de linha */
+            margin: 0 auto;
+            /*Centraliza (opcional) */
+            letter-spacing: 0.01em;
+            /* Espaçamento entre letras */
+            animation:
+                /*typing 4.5s steps(30, end), /* Efeito de digitação */
+                typing 6s steps(30, end) infinite,
+                /* Mudei para 8s e infinite */
+                blink-caret 0.95s step-end infinite;
+            /* Efeito do cursor */
+
+            padding-right: 5px;
+            /* Espaço entre texto e cursor */
+            display: inline-block;
+            position: relative;
+
+
+
+        }
+
+
+        .client-text h2 {
+            font-size: clamp(1.4rem, 4vw, 3rem);
+        }
+
+        .client-text h2::after {
+            width: clamp(8px, 1.2vw, 12px);
+        }
+
+
+
+
+        /* Animação completa (digitação + apagamento) */
+        @keyframes typing {
+            0% {
+                width: 0
+            }
+
+            50% {
+                width: 100%
+            }
+
+            90% {
+                width: 100%
+            }
+
+            /* Mantém texto completo por um tempo */
+            100% {
+                width: 0
+            }
+
+            /* Apaga o texto */
+        }
+
+
+        .typing-container {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            vertical-align: bottom;
+            animation: typing -9s steps(30, end) infinite;
+        }
+
+
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: hsl(236, 100%, 70%)
+            }
+        }
+
+
+        /* Animação de piscar personalizada */
+        @keyframes blink-caret {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
         }
 
         .client-text p {
@@ -1048,6 +1160,117 @@
 
         @media (max-width: 992px) {
 
+            .client-text h2 {
+                text-align: center;
+                /* margin-bottom: 10px; */
+                color: black;
+
+            }
+
+
+            .client-text h2 {
+                /* font-family: 'Courier New', Courier, monospace; */
+                font-size: 0.9rem;
+                overflow: hidden;
+                /* Esconde o texto que "transborda" */
+                border-right: 0.10em solid #0066cc;
+                /* Cria o cursor piscante */
+                white-space: nowrap;
+                /* Impede a quebra de linha */
+                margin: 0 auto;
+                /*Centraliza (opcional) */
+                letter-spacing: 0.01em;
+                /* Espaçamento entre letras */
+                animation:
+                    /*typing 4.5s steps(30, end), /* Efeito de digitação */
+                    typing 6s steps(30, end) infinite,
+                    /* Mudei para 8s e infinite */
+                    blink-caret 0.95s step-end infinite;
+                /* Efeito do cursor */
+
+                padding-right: 5px;
+                /* Espaço entre texto e cursor */
+                display: inline-block;
+                position: relative;
+
+
+
+            }
+
+
+            .client-text h2 {
+                font-size: clamp(1.4rem, 4vw, 3rem);
+            }
+
+            .client-text h2::after {
+                width: clamp(8px, 1.2vw, 12px);
+            }
+
+
+
+
+            /* Animação completa (digitação + apagamento) */
+            @keyframes typing {
+                0% {
+                    width: 0
+                }
+
+                50% {
+                    width: 100%
+                }
+
+                90% {
+                    width: 100%
+                }
+
+                /* Mantém texto completo por um tempo */
+                100% {
+                    width: 0
+                }
+
+                /* Apaga o texto */
+            }
+
+
+            .typing-container {
+                display: inline-block;
+                position: relative;
+                overflow: hidden;
+                vertical-align: bottom;
+                animation: typing -9s steps(30, end) infinite;
+            }
+
+
+
+            @keyframes blink-caret {
+
+                from,
+                to {
+                    border-color: transparent
+                }
+
+                50% {
+                    border-color: hsl(236, 100%, 70%)
+                }
+            }
+
+
+            /* Animação de piscar personalizada */
+            @keyframes blink-caret {
+
+                0%,
+                100% {
+                    opacity: 0;
+                }
+
+                50% {
+                    opacity: 1;
+                }
+            }
+
+
+
+
             .hero-content,
             .client-content {
                 flex-direction: column;
@@ -1105,7 +1328,8 @@
             }
 
             .hero-text h1 {
-                font-size: 2.5rem;
+                font-size: 0.5rem;
+                
             }
 
             .section-title h2 {
@@ -1168,8 +1392,8 @@
             }
 
             .hero-text h1 {
-                font-size: 2.3rem;
-                line-height: 1.3;
+                font-size: 0.3rem;
+                line-height: 1.2;
             }
 
             .hero-text p {
@@ -1185,20 +1409,144 @@
                 font-size: 10px;
             }
 
+
+
+
+
             /* Melhorias na seção de foco do cliente */
+
             .client-content {
                 flex-direction: column;
             }
 
-            .client-text h2 {
-                font-size: 2rem;
+
+            /* .client-text h2 {
+                display: inline-block;
+                font-size: 1.5rem;
                 text-align: center;
-            }
+
+
+
+            }         */
 
             .client-text h2:after {
                 left: 50%;
                 transform: translateX(-50%);
             }
+
+
+
+
+            .client-text h2 {
+                text-align: center;
+                /* margin-bottom: 10px; */
+                color: black;
+
+            }
+
+
+            .client-text h2 {
+                /* font-family: 'Courier New', Courier, monospace; */
+                font-size: 0.9rem;
+                overflow: hidden;
+                /* Esconde o texto que "transborda" */
+                border-right: 0.10em solid #0066cc;
+                /* Cria o cursor piscante */
+                white-space: nowrap;
+                /* Impede a quebra de linha */
+                margin: 0 auto;
+                /*Centraliza (opcional) */
+                letter-spacing: 0.01em;
+                /* Espaçamento entre letras */
+                animation:
+                    /*typing 4.5s steps(30, end), /* Efeito de digitação */
+                    typing 6s steps(30, end) infinite,
+                    /* Mudei para 8s e infinite */
+                    blink-caret 0.95s step-end infinite;
+                /* Efeito do cursor */
+
+                padding-right: 5px;
+                /* Espaço entre texto e cursor */
+                display: inline-block;
+                position: relative;
+
+
+
+            }
+
+
+            .client-text h2 {
+                font-size: clamp(1.4rem, 4vw, 3rem);
+            }
+
+            .client-text h2::after {
+                width: clamp(8px, 1.2vw, 12px);
+            }
+
+
+
+
+            /* Animação completa (digitação + apagamento) */
+            @keyframes typing {
+                0% {
+                    width: 0
+                }
+
+                50% {
+                    width: 100%
+                }
+
+                90% {
+                    width: 100%
+                }
+
+                /* Mantém texto completo por um tempo */
+                100% {
+                    width: 0
+                }
+
+                /* Apaga o texto */
+            }
+
+
+            .typing-container {
+                display: inline-block;
+                position: relative;
+                overflow: hidden;
+                vertical-align: bottom;
+                animation: typing -9s steps(30, end) infinite;
+            }
+
+
+
+            @keyframes blink-caret {
+
+                from,
+                to {
+                    border-color: transparent
+                }
+
+                50% {
+                    border-color: hsl(236, 100%, 70%)
+                }
+            }
+
+
+            /* Animação de piscar personalizada */
+            @keyframes blink-caret {
+
+                0%,
+                100% {
+                    opacity: 0;
+                }
+
+                50% {
+                    opacity: 1;
+                }
+            }
+
+
+
 
             .principles {
                 grid-template-columns: 1fr;
@@ -1496,13 +1844,14 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <h1>Worx<span>EL</span></h1>
+                    <h1>WORX<span>EL</span></h1>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#features">Benefícios</a></li>
@@ -1521,12 +1870,14 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Potencialize seu Negócio com <span>Tráfego Pago</span> e <span>Landing Pages</span> de Alta Conversão</h1>
-                    <p>Na WorxEL, seu crescimento é nossa prioridade. Combinamos a precisão de dados da BlackRock com a inovação do Nubank para oferecer resultados excepcionais.</p>
+                    <h1>Potencialize seu Negócio com <br><span>Tráfego Pago</span> e <br> <span>Landing Pages</span> de Alta Conversão</h1>
+                    <p>Na WorxEL, seu crescimento é nossa prioridade. Combinamos a precisão de dados da BlackRock com a
+                        inovação do Nubank para oferecer resultados excepcionais.</p>
                     <a href="#plans" class="cta-button">Conhecer Planos</a>
                 </div>
                 <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Soluções Digitais WorxEL">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Soluções Digitais WorxEL">
                 </div>
             </div>
         </div>
@@ -1537,9 +1888,10 @@
         <div class="container">
             <div class="section-title reveal">
                 <h2>Como Potencializamos Seu Crescimento</h2>
-                <p>Integramos os melhores princípios das empresas mais inovadoras do mundo para oferecer resultados excepcionais</p>
+                <p>Integramos os melhores princípios das empresas mais inovadoras do mundo para oferecer resultados
+                    excepcionais</p>
             </div>
-            
+
             <div class="features-grid">
                 <div class="feature-card reveal">
                     <div class="feature-icon">
@@ -1547,27 +1899,30 @@
                     </div>
                     <!-- AWS -->
                     <h3>Velocidade</h3>
-                    <p>Implementação rápida de landing pages com modelos otimizados e escaláveis, seguindo a agilidade da Amazon Web Services.</p>
+                    <p>Implementação rápida de landing pages com modelos otimizados e escaláveis, seguindo a agilidade
+                        da Amazon Web Services.</p>
                 </div>
-                
+
                 <div class="feature-card reveal">
                     <div class="feature-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <!-- BlackRock -->
                     <h3>Gestão</h3>
-                    <p>Rigorosidade analítica e gestão baseada em dados, inspirada na maior gestora de ativos do mundo.</p>
+                    <p>Rigorosidade analítica e gestão baseada em dados, inspirada na maior gestora de ativos do mundo.
+                    </p>
                 </div>
-                
+
                 <div class="feature-card reveal">
                     <div class="feature-icon">
                         <i class="fas fa-user-friends"></i>
                     </div>
                     <!-- Nubank -->
                     <h3>Experiência</h3>
-                    <p>Colocamos a experiência do cliente no centro de todas as decisões, simplificando processos complexos.</p>
+                    <p>Colocamos a experiência do cliente no centro de todas as decisões, simplificando processos
+                        complexos.</p>
                 </div>
-                
+
                 <div class="feature-card reveal">
                     <div class="feature-icon">
                         <i class="fas fa-lightbulb"></i>
@@ -1611,13 +1966,13 @@
                 <h2>Nossos Planos de Serviços</h2>
                 <p>Soluções personalizadas para cada etapa do seu crescimento digital</p>
             </div>
-            
+
             <div class="plans-container">
                 <!-- Landing Page Plan -->
                 <div class="plan-card reveal">
                     <div class="plan-header">
                         <h3>Landing Page</h3>
-                        <div class="plan-price">R$299,99<span>/projeto</span></div>
+                        <div class="plan-price">R$1.299<span>/projeto</span></div>
                         <p>Solução completa para capturar leads e vendas</p>
                     </div>
                     <div class="plan-description">
@@ -1626,15 +1981,15 @@
                             <li><i class="fas fa-check"></i> Modelo pré-otimizado para conversão</li>
                             <li><i class="fas fa-check"></i> Integração com Google Analytics</li>
                             <li><i class="fas fa-check"></i> Formulário de captura de leads</li>
-                            <li><i class="fas fa-check"></i> Hospedagem básica (1 ano)</li>
+                            <li><i class="fas fa-check"></i> Hospedagem básica (3 meses)</li>
                             <li><i class="fas fa-check"></i> Suporte técnico por 30 dias</li>
                             <li><i class="fas fa-check"></i> SEO básico implementado</li>
-                            <li><i class="fas fa-check"></i> Integração com CRM</li>
+                            <!-- <li><i class="fas fa-check"></i> Integração com CRM</li> -->
                         </ul>
                         <a href="#contact" class="cta-button">Contratar</a>
                     </div>
                 </div>
-                
+
                 <!-- Gestão de Tráfego Pago Plan -->
                 <div class="plan-card reveal">
                     <div class="plan-header">
@@ -1656,7 +2011,7 @@
                         <a href="#contact" class="cta-button">Contratar</a>
                     </div>
                 </div>
-                
+
                 <!-- Combo Plan -->
                 <div class="plan-card popular reveal">
                     <div class="plan-header">
@@ -1687,10 +2042,16 @@
         <div class="container">
             <div class="client-content">
                 <div class="client-text">
-                    <h2>O Cliente no <span>Centro de Tudo</span></h2>
-                    <p>Na WorxEL, seguimos o princípio fundamental: seu sucesso é o nosso sucesso. Assim como empresas líderes de mercado, colocamos você no centro de todas as nossas decisões e estratégias.</p>
-                    <p>Nosso compromisso é entender profundamente seu negócio, seus desafios e objetivos para criar soluções que realmente impulsionem seu crescimento.</p>
-                    
+
+                    <div class="typing-container">
+                        <h2>O Cliente no <span>Centro de Tudo.</Centro></span></h2>
+                    </div>
+
+                    <p>Na WorxEL, seguimos o princípio fundamental: seu sucesso é o nosso sucesso. Assim como empresas
+                        líderes de mercado, colocamos você no centro de todas as nossas decisões e estratégias.</p>
+                    <p>Nosso compromisso é entender profundamente seu negócio, seus desafios e objetivos para criar
+                        soluções que realmente impulsionem seu crescimento.</p>
+
                     <div class="principles">
                         <div class="principle">
                             <!--  XP Investimentos -->
@@ -1715,7 +2076,8 @@
                     </div>
                 </div>
                 <div class="client-image">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Foco no cliente WorxEL">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Foco no cliente WorxEL">
                 </div>
             </div>
         </div>
@@ -1728,46 +2090,53 @@
                 <h2>Notícias e Insights para seu Negócio</h2>
                 <p>Mantenha-se atualizado com as tendências de mercado que impactam seu negócio</p>
             </div>
-            
+
             <div class="news-container">
                 <div class="news-card reveal">
                     <div class="news-image">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tendências de investimento">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Tendências de investimento">
                     </div>
                     <div class="news-content">
                         <span class="news-category">Investimentos</span>
-                        <h3 class="news-title">Como as novas políticas de juros afetam investimentos em marketing digital</h3>
-                        <p class="news-excerpt">Entenda como as decisões do COPOM impactam o retorno sobre investimento em campanhas digitais e como adaptar sua estratégia.</p>
+                        <h3 class="news-title">Como as novas políticas de juros afetam investimentos em marketing
+                            digital</h3>
+                        <p class="news-excerpt">Entenda como as decisões do COPOM impactam o retorno sobre investimento
+                            em campanhas digitais e como adaptar sua estratégia.</p>
                         <div class="news-meta">
                             <span><i class="far fa-calendar"></i> 15 Out 2023</span>
                             <span><i class="far fa-clock"></i> 4 min leitura</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="news-card reveal">
                     <div class="news-image">
-                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Governança corporativa">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Governança corporativa">
                     </div>
                     <div class="news-content">
                         <span class="news-category">Governança</span>
                         <h3 class="news-title">A importância da governança de dados para estratégias de marketing</h3>
-                        <p class="news-excerpt">Como implementar práticas de governança de dados que aumentam a eficiência das campanhas de tráfego pago.</p>
+                        <p class="news-excerpt">Como implementar práticas de governança de dados que aumentam a
+                            eficiência das campanhas de tráfego pago.</p>
                         <div class="news-meta">
                             <span><i class="far fa-calendar"></i> 10 Out 2023</span>
                             <span><i class="far fa-clock"></i> 6 min leitura</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="news-card reveal">
                     <div class="news-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Economia digital">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Economia digital">
                     </div>
                     <div class="news-content">
                         <span class="news-category">Economia</span>
                         <h3 class="news-title">O impacto da economia digital no ROI de landing pages</h3>
-                        <p class="news-excerpt">Análise das tendências econômicas que estão moldando o comportamento do consumidor online e como aproveitá-las.</p>
+                        <p class="news-excerpt">Análise das tendências econômicas que estão moldando o comportamento do
+                            consumidor online e como aproveitá-las.</p>
                         <div class="news-meta">
                             <span><i class="far fa-calendar"></i> 5 Out 2023</span>
                             <span><i class="far fa-clock"></i> 5 min leitura</span>
@@ -1809,26 +2178,30 @@
             <div class="cta-grid">
                 <div class="cta-text">
                     <h2>Pronto para Acelerar seu Crescimento?</h2>
-                    <p>Junte-se a centenas de empresas que já transformaram seus resultados com as soluções integradas da
-                        WorxEL. Nossa abordagem centrada no cliente garante que seu sucesso seja nossa prioridade máxima.
+                    <p>Junte-se a centenas de empresas que já transformaram seus resultados com as soluções integradas
+                        da
+                        WorxEL. Nossa abordagem centrada no cliente garante que seu sucesso seja nossa prioridade
+                        máxima.
                     </p>
                 </div>
-    
+
                 <div class="cta-form">
-                   <form class="contact-form" action="https://formspree.io/f/xnnpvapl" method="POST">
+                    <form class="contact-form" action="https://formspree.io/f/xnnpvapl" method="POST">
                         <input type="text" name="_gotcha" style="display:none">
-                
+
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Seu nome completo" required> <!-- Nome correto -->
+                            <input type="text" name="name" placeholder="Seu nome completo" required>
+                            <!-- Nome correto -->
                         </div>
                         <div class="form-group">
-                            <input type="email" name="_replyto" placeholder="Seu melhor e-mail" required> <!-- Email correto -->
+                            <input type="email" name="_replyto" placeholder="Seu melhor e-mail" required>
+                            <!-- Email correto -->
                         </div>
-                
+
                         <div class="form-group">
                             <input type="tel" name="telefone" placeholder="Seu WhatsApp (com DDD)" required>
                         </div>
-                
+
                         <div class="form-group">
                             <textarea rows="6" name="message" placeholder="Como podemos ajudar?" required></textarea>
                         </div>
@@ -1836,16 +2209,19 @@
                             Enviar Mensagem <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
-                
+
                 </div>
             </div>
-            
+
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d435.4487186838547!2d-48.65236514993466!3d-27.027685539020005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c06e339e99eb7d1%3A0x19d541c1d1b5902a!2sDoBrand%20Marketing%20%26%20Studios!5e1!3m2!1spt-BR!2sbr!4v1752028518765!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d435.4487186838547!2d-48.65236514993466!3d-27.027685539020005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c06e339e99eb7d1%3A0x19d541c1d1b5902a!2sDoBrand%20Marketing%20%26%20Studios!5e1!3m2!1spt-BR!2sbr!4v1752028518765!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
         </div>
@@ -1856,15 +2232,17 @@
         <div class="container">
             <div class="footer-content">
 
-               <div class="footer-column">
+                <div class="footer-column">
                     <h3>Contato</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Av.Justiano da Silva, Camboriú-SC</p>
-                    <a href="https://wa.me/5547992627553"><p><i class="fas fa-phone"></i> (47) 99262-7553</p></a>
+                    <a href="https://wa.me/5547992627553">
+                        <p><i class="fas fa-phone"></i> (47) 99262-7553</p>
+                    </a>
                     <p><i class="fas fa-envelope"></i> worxel@outlook.com</p>
                     <p><i class="fas fa-clock"></i> Seg-Sex: 18h às 22h</p>
-                </div>                
+                </div>
 
-                
+
                 <div class="footer-column">
                     <h3>Serviços</h3>
                     <a href="#plans">Landing Pages</a>
@@ -1872,7 +2250,7 @@
                     <a href="#plans">Soluções Completas</a>
                     <a href="#plans">Otimização de Conversão</a>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3>Links Rápidos</h3>
                     <a href="#features">Benefícios</a>
@@ -1880,25 +2258,27 @@
                     <a href="#news">Notícias</a>
                     <a href="#client">Sobre Nós</a>
                 </div>
-                
+
 
                 <div class="footer-column">
                     <h3>WorxEL</h3>
-                    <p>Potencializando o crescimento de negócios através de soluções digitais integradas e centradas no cliente.</p>
+                    <p>Potencializando o crescimento de negócios através de soluções digitais integradas e centradas no
+                        cliente.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        
+
                     </div>
                 </div>
 
 
             </div>
-            
-            
+
+
             <div class="copyright">
-                <p>&copy; 2025 WorxEL. Todos os direitos reservados. Desenvolvido com paixão para impulsionar seu negócio.</p>
+                <p>&copy; 2025 WorxEL. Todos os direitos reservados. Desenvolvido com paixão para impulsionar seu
+                    negócio.</p>
             </div>
         </div>
     </footer>
@@ -1982,12 +2362,13 @@
         }, { threshold: 0.5 });
 
         observer.observe(statsSection);
-        
-       
 
 
 
-      
+
+
+
     </script>
 </body>
+
 </html>
